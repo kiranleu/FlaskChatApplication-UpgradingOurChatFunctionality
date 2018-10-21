@@ -36,7 +36,7 @@ def user(username):
                             username=username, chat_messages=messages)
 
 
-@app.route('/<username/<message>')
+@app.route('/<username>/<message>')
 def send_message(username, message):
     """Create a new message and redirect back to the chat page"""
     add_messages(username, message)
